@@ -4,24 +4,24 @@ PUBLIC hdev
 
 SET DEFAULT TO d:\develop\usbrelay\
 
-* ведення логу
+* РІРµРґРµРЅРЅСЏ Р»РѕРіСѓ
 SET PROCEDURE TO log.prg 
 
-* функции роботи з USB Relay модулем 
+* С„СѓРЅРєС†РёРё СЂРѕР±РѕС‚Рё Р· USB Relay РјРѕРґСѓР»РµРј 
 SET PROCEDURE TO usbrelay ADDITIVE
 
-* видаляємо лог
+* РІРёРґР°Р»СЏС”РјРѕ Р»РѕРі
 IF FILE("log.txt")    
  ERASE ("log.txt") 
 ENDIF 
 
-* Налаштуємо USB модуль
+* РќР°Р»Р°С€С‚СѓС”РјРѕ USB РјРѕРґСѓР»СЊ
 USBRelaySetup()
 
-* Ініціалізація змінної для зберігання ідентифікаторів пристроїв
+* Р†РЅС–С†С–Р°Р»С–Р·Р°С†С–СЏ Р·РјС–РЅРЅРѕС— РґР»СЏ Р·Р±РµСЂС–РіР°РЅРЅСЏ С–РґРµРЅС‚РёС„С–РєР°С‚РѕСЂС–РІ РїСЂРёСЃС‚СЂРѕС—РІ
 devids = CREATEOBJECT("Collection")
 
-* Перебір всіх пристроїв
+* РџРµСЂРµР±С–СЂ РІСЃС–С… РїСЂРёСЃС‚СЂРѕС—РІ
 enuminfo = usb_relay_device_enumerate()
 
 DO FORM mainform
