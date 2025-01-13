@@ -1,0 +1,13 @@
+01/13/25 14:42:00 - Found devices: 1
+01/13/25 14:42:02 - Opening BITFT
+01/13/25 14:42:02 - Number of relays on device with ID=BITFT: 2
+01/13/25 14:42:02 - Relay status          0
+01/13/25 14:42:02 - Opening relay channel 1 on device
+01/13/25 14:42:02 - Relay channel 1 opened successfully
+01/13/25 14:42:02 - Opening BITFT
+01/13/25 14:42:02 - Number of relays on device with ID=BITFT: 2
+01/13/25 14:42:02 - Relay status          1
+01/13/25 14:42:02 - Closing relay channel 1 on device
+01/13/25 14:42:02 - Relay channel 1 closed successfully
+01/13/25 14:42:03 - Closing all relay channels on device
+01/13/25 14:42:03 - All relay channels closed successfully on device
