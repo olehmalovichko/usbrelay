@@ -162,12 +162,10 @@ FUNCTION closeRelayChannel(hdev, channel)
     IF result != 0
         * Якщо канал не закрився, виводимо помилку
         WriteToLog("Failed to close relay channel " + ALLTRIM(STR(channel)) + " on device")
-        RETURN result 
     ENDIF
     
     * Якщо канал успішно закритий, виводимо повідомлення
     WriteToLog("Relay channel " + ALLTRIM(STR(channel)) + " closed successfully")
-    RETURN result 
 ENDFUNC
 
 FUNCTION usb_relay_device_get_status(hdev)

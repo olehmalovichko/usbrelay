@@ -1,56 +1,35 @@
-01/14/25 08:28:23 - Found devices: 0
-01/14/25 08:28:24 - Found devices: 0
-01/14/25 08:28:24 - Found devices: 0
-01/14/25 08:28:28 - Found devices: 1
-01/14/25 08:28:29 - Opening BITFT
-01/14/25 08:28:29 - Number of relays on device with ID=BITFT: 2
-01/14/25 08:28:29 - Relay status          0
-01/14/25 08:28:29 - Opening relay channel 1 on device
-01/14/25 08:28:29 - Relay channel 1 opened successfully
-01/14/25 08:28:30 - Opening BITFT
-01/14/25 08:28:30 - Number of relays on device with ID=BITFT: 2
-01/14/25 08:28:30 - Relay status          1
-01/14/25 08:28:30 - Closing relay channel 1 on device
-01/14/25 08:28:30 - Relay channel 1 closed successfully
-01/14/25 08:28:30 - Opening BITFT
-01/14/25 08:28:30 - Number of relays on device with ID=BITFT: 2
-01/14/25 08:28:30 - Relay status          0
-01/14/25 08:28:30 - Opening relay channel 1 on device
-01/14/25 08:28:30 - Relay channel 1 opened successfully
-01/14/25 08:28:30 - Opening BITFT
-01/14/25 08:28:30 - Number of relays on device with ID=BITFT: 2
-01/14/25 08:28:30 - Relay status          1
-01/14/25 08:28:30 - Closing relay channel 1 on device
-01/14/25 08:28:30 - Relay channel 1 closed successfully
-01/14/25 08:28:30 - Opening BITFT
-01/14/25 08:28:30 - Number of relays on device with ID=BITFT: 2
-01/14/25 08:28:30 - Relay status          0
-01/14/25 08:28:30 - Opening relay channel 1 on device
-01/14/25 08:28:30 - Relay channel 1 opened successfully
-01/14/25 08:28:30 - Opening BITFT
-01/14/25 08:28:30 - Number of relays on device with ID=BITFT: 2
-01/14/25 08:28:30 - Relay status          1
-01/14/25 08:28:30 - Closing relay channel 1 on device
-01/14/25 08:28:30 - Relay channel 1 closed successfully
-01/14/25 08:28:31 - Opening BITFT
-01/14/25 08:28:31 - Number of relays on device with ID=BITFT: 2
-01/14/25 08:28:31 - Relay status          0
-01/14/25 08:28:31 - Opening relay channel 1 on device
-01/14/25 08:28:31 - Relay channel 1 opened successfully
-01/14/25 08:28:31 - Opening BITFT
-01/14/25 08:28:31 - Number of relays on device with ID=BITFT: 2
-01/14/25 08:28:31 - Relay status          1
-01/14/25 08:28:31 - Closing relay channel 1 on device
-01/14/25 08:28:31 - Relay channel 1 closed successfully
-01/14/25 08:28:31 - Opening BITFT
-01/14/25 08:28:31 - Number of relays on device with ID=BITFT: 2
-01/14/25 08:28:31 - Relay status          0
-01/14/25 08:28:31 - Opening relay channel 1 on device
-01/14/25 08:28:31 - Relay channel 1 opened successfully
-01/14/25 08:28:32 - Opening BITFT
-01/14/25 08:28:32 - Number of relays on device with ID=BITFT: 2
-01/14/25 08:28:32 - Relay status          1
-01/14/25 08:28:32 - Closing relay channel 1 on device
-01/14/25 08:28:32 - Relay channel 1 closed successfully
-01/14/25 08:28:33 - Closing all relay channels on device
-01/14/25 08:28:33 - All relay channels closed successfully on device
+01/14/25 11:40:00 - Found devices: 1
+01/14/25 11:40:02 - Opening HURTM
+01/14/25 11:40:02 - Number of relays on device with ID=HURTM: 2
+01/14/25 11:40:02 - Opening relay channel 2 on device
+01/14/25 11:40:02 - Relay channel 2 opened successfully
+01/14/25 11:40:03 - Opening HURTM
+01/14/25 11:40:03 - Number of relays on device with ID=HURTM: 2
+01/14/25 11:40:03 - Opening relay channel 1 on device
+01/14/25 11:40:03 - Relay channel 1 opened successfully
+01/14/25 11:40:03 - Opening HURTM
+01/14/25 11:40:03 - Number of relays on device with ID=HURTM: 2
+01/14/25 11:40:03 - Closing relay channel 2 on device
+01/14/25 11:40:03 - Relay channel 2 closed successfully
+01/14/25 11:40:04 - Opening HURTM
+01/14/25 11:40:04 - Number of relays on device with ID=HURTM: 2
+01/14/25 11:40:04 - Closing relay channel 1 on device
+01/14/25 11:40:04 - Relay channel 1 closed successfully
+01/14/25 11:40:05 - Opening HURTM
+01/14/25 11:40:05 - Number of relays on device with ID=HURTM: 2
+01/14/25 11:40:05 - Opening relay channel 2 on device
+01/14/25 11:40:05 - Relay channel 2 opened successfully
+01/14/25 11:40:05 - Opening HURTM
+01/14/25 11:40:05 - Number of relays on device with ID=HURTM: 2
+01/14/25 11:40:05 - Opening relay channel 1 on device
+01/14/25 11:40:05 - Relay channel 1 opened successfully
+01/14/25 11:40:06 - Opening HURTM
+01/14/25 11:40:06 - Number of relays on device with ID=HURTM: 2
+01/14/25 11:40:06 - Closing relay channel 2 on device
+01/14/25 11:40:06 - Relay channel 2 closed successfully
+01/14/25 11:40:06 - Opening HURTM
+01/14/25 11:40:06 - Number of relays on device with ID=HURTM: 2
+01/14/25 11:40:06 - Closing relay channel 1 on device
+01/14/25 11:40:06 - Relay channel 1 closed successfully
+01/14/25 11:40:10 - Closing all relay channels on device
+01/14/25 11:40:10 - All relay channels closed successfully on device
