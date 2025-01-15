@@ -4,173 +4,188 @@
 * https://github.com/olehmalovichko/usbrelay
 ***********************************************
 
-*CLEAR
-*SET PROCEDURE TO log ADDITIVE
-
 PROCEDURE USBRelaySetup
-* Шлях до USB_RELAY_DEVICE.DLL обов'язково вказати
+* Specify the path to USB_RELAY_DEVICE.DLL
 SET DEFA TO D:\Develop\USBRelay\
 
-* Оголошення функцій для взаємодії з USB_RELAY_DEVICE.DLL
+* Declare functions for interacting with USB_RELAY_DEVICE.DLL
 
-* Перерахунок всіх пристроїв
+* Enumerate all devices
 DECLARE INTEGER usb_relay_device_enumerate IN USB_RELAY_DEVICE.dll
 
-* Відкриття пристрою за серійним номером
+* Open device by serial number
 DECLARE INTEGER usb_relay_device_open_with_serial_number IN USB_RELAY_DEVICE.dll STRING serial_number, INTEGER h
 
-* Отримання кількості реле на пристрої
+* Get the number of relays on the device
 DECLARE INTEGER usb_relay_device_get_num_relays IN USB_RELAY_DEVICE.dll INTEGER h
 
-* Отримання ID пристрою як рядка
+* Get the device ID as a string
 DECLARE STRING usb_relay_device_get_id_string IN USB_RELAY_DEVICE.dll INTEGER h
 
-* Отримання наступного пристрою в переліку
+* Get the next device in the list
 DECLARE INTEGER usb_relay_device_next_dev IN USB_RELAY_DEVICE.dll INTEGER h
 
-* Отримання стану всіх реле на пристрої у вигляді бітової карти
+* Get the status of all relays on the device as a bitmap
 DECLARE INTEGER usb_relay_device_get_status_bitmap IN USB_RELAY_DEVICE.dll INTEGER h
 
-* Відкриття одного канала реле на пристрої
+* Open a single relay channel on the device
 DECLARE INTEGER usb_relay_device_open_one_relay_channel IN USB_RELAY_DEVICE.dll INTEGER h, INTEGER relay_channel
 
-* Закриття одного канала реле на пристрої
+* Close a single relay channel on the device
 DECLARE INTEGER usb_relay_device_close_one_relay_channel IN USB_RELAY_DEVICE.dll INTEGER h, INTEGER relay_channel
 
-* Закриття пристрою (закриває всі канали)
+* Close the device (closes all channels)
 DECLARE INTEGER usb_relay_device_close IN USB_RELAY_DEVICE.dll INTEGER h
 
-* Закриття всіх каналів реле на пристрої
+* Close all relay channels on the device
 DECLARE INTEGER usb_relay_device_close_all_relay_channel IN USB_RELAY_DEVICE.dll INTEGER h
 
 ENDPROC
 
-
 ********************************************************************************************************
 
-* Відкриття пристрою за відомим ID
+* Open a device by a known ID
 FUNCTION openDevById(idstr)
-    * Виведення повідомлення про спробу відкриття пристрою
+    * Log the attempt to open the device
     WriteToLog("Opening " + idstr)
     
-    * Перетворення рядка в формат, придатний для виклику DLL
+    * Convert the string to a format suitable for DLL calls
     idstrp = stringToCharp(idstr)
     
-    * Відкриття пристрою за відомим ID
+    * Open the device by a known ID
     h = usb_relay_device_open_with_serial_number(idstrp, 5)
     
     IF h = 0
-        * Якщо не вдалося відкрити пристрій, виводимо помилку
+        * Log an error if the device cannot be opened
         WriteToLog("Cannot open device with id=" + idstr)
     ENDIF
     
-    * Отримання кількості реле на пристрої
+    * Get the number of relays on the device
     numch = usb_relay_device_get_num_relays(h)
     
     IF numch <= 0 OR numch > 8
-        * Якщо кількість реле не відповідає діапазону 1-8, виводимо помилку
+        * Log an error if the number of relays is out of range (1-8)
         WriteToLog("Bad number of channels, can be 1-8")
     ENDIF
     
-    * Збереження дескриптора пристрою у глобальну змінну
+    * Save the device handle to a global variable
     hdev = h
     
-    * Виведення кількості реле на пристрої
+    * Log the number of relays on the device
     WriteToLog("Number of relays on device with ID=" + idstr + ": " + ALLTRIM(STR(numch)))
 ENDFUNC
 
-
-* Функція для закриття пристрою
+* Function to close the device
 FUNCTION closeDevice(hdev)
-    * Виводимо повідомлення про спробу закриття пристрою
+    * Log the attempt to close the device
     WriteToLog("Closing device")
     
-    * Закриваємо пристрій
+    * Close the device
     result = usb_relay_device_close(hdev)
     
     IF result != 0
-        * Якщо пристрій не вдалося закрити, виводимо помилку
+        * Log an error if the device cannot be closed
         fail("Failed to close device")
     ENDIF
     
-    * Якщо пристрій успішно закритий, виводимо повідомлення
+    * Log a success message if the device is closed successfully
     WriteToLog("Device closed successfully")
 ENDFUNC
 
-* Функція для обробки помилок
+* Function for error handling
 FUNCTION fail(message)
-    * Виводимо помилку і припиняємо виконання
+    * Log the error and terminate execution
     WriteToLog(message)
     CANCEL
 ENDFUNC
 
-* Функція для закриття всіх каналів реле на пристрої
+* Function to close all relay channels on the device
 FUNCTION closeAllRelayChannels(hdev)
-    * Виводимо повідомлення про спробу закриття всіх каналів реле
+    * Log the attempt to close all relay channels
     WriteToLog("Closing all relay channels on device")
     
-    * Закриваємо всі канали реле на пристрої
+    * Close all relay channels on the device
     result = usb_relay_device_close_all_relay_channel(hdev)
     
     IF result != 0
-        * Якщо канали не вдалося закрити, виводимо помилку
+        * Log an error if channels cannot be closed
         WriteToLog("Failed to close all relay channels on device")
         RETURN result 
     ENDIF
     
-    * Якщо канали успішно закриті, виводимо повідомлення
+    * Log a success message if all channels are closed successfully
     WriteToLog("All relay channels closed successfully on device")
     RETURN result
 ENDFUNC
 
-* Перетворення рядка в формат, придатний для виклику DLL
+* Convert a string to a format suitable for DLL calls
 FUNCTION stringToCharp(str)
-    * Повернення рядка у форматі, придатному для DLL
-    * Якщо необхідно, можна додати додаткові кроки для перетворення
+    * Return the string in a format suitable for DLL
+    * Additional conversion steps can be added if necessary
     RETURN str
 ENDFUNC
 
-* Функція для відкриття одного канала реле
+* Function to open a single relay channel
 FUNCTION openRelayChannel(hdev, channel)
-    * Виводимо повідомлення про спробу відкриття канала реле
+    * Log the attempt to open a relay channel
     WriteToLog("Opening relay channel " + ALLTRIM(STR(channel)) + " on device")
     
-    * Відкриваємо канал реле на пристрої
+    * Open the relay channel on the device
     result = usb_relay_device_open_one_relay_channel(hdev, channel)
     
     IF result != 0
-        * Якщо канал не відкрився, виводимо помилку
-        * fail("Failed to open relay channel " + ALLTRIM(STR(channel)) + " on device")
-         WriteToLog("Failed to open relay channel " + ALLTRIM(STR(channel)) + " on device")
-         RETURN result 
+        * Log an error if the channel cannot be opened
+        WriteToLog("Failed to open relay channel " + ALLTRIM(STR(channel)) + " on device")
+        RETURN result 
     ENDIF
     
-    * Якщо канал успішно відкритий, виводимо повідомлення
+    * Log a success message if the channel is opened successfully
     WriteToLog("Relay channel " + ALLTRIM(STR(channel)) + " opened successfully")
     RETURN result 
 ENDFUNC
 
-
-* Функція для закриття одного канала реле
+* Function to close a single relay channel
 FUNCTION closeRelayChannel(hdev, channel)
-    * Виводимо повідомлення про спробу закриття канала реле
+    * Log the attempt to close a relay channel
     WriteToLog("Closing relay channel " + ALLTRIM(STR(channel)) + " on device")
     
-    * Закриваємо канал реле на пристрої
+    * Close the relay channel on the device
     result = usb_relay_device_close_one_relay_channel(hdev, channel)
     
     IF result != 0
-        * Якщо канал не закрився, виводимо помилку
+        * Log an error if the channel cannot be closed
         WriteToLog("Failed to close relay channel " + ALLTRIM(STR(channel)) + " on device")
+        RETURN result 
     ENDIF
     
-    * Якщо канал успішно закритий, виводимо повідомлення
+    * Log a success message if the channel is closed successfully
     WriteToLog("Relay channel " + ALLTRIM(STR(channel)) + " closed successfully")
+    RETURN result 
 ENDFUNC
 
 FUNCTION usb_relay_device_get_status(hdev)
    result = usb_relay_device_get_status_bitmap(hdev)
    WriteToLog("Relay status " + STR(result))
    RETURN result
-ENDFUNC 
- 
+ENDFUNC
+
+
+FUNCTION getNumberOfRelays(hdev)
+    * Log the attempt to get the number of relays
+    WriteToLog("Getting number of relays on the device")
+    
+    * Call the DLL function to get the number of relays
+    numRelays = usb_relay_device_get_num_relays(hdev)
+    
+    IF numRelays <= 0
+        * Log an error if the number of relays is invalid
+        WriteToLog("Failed to get the number of relays or no relays found on device")
+        RETURN 0
+    ENDIF
+    
+    * Log the number of relays found
+    WriteToLog("Number of relays on the device: " + ALLTRIM(STR(numRelays)))
+    
+    * Return the number of relays
+    RETURN numRelays
+ENDFUNC

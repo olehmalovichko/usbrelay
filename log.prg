@@ -1,50 +1,49 @@
-
-* Ведення логу у текстовий файл
-* Приклад
-* WriteToLog("Початок роботи програми", "application_log.txt", 500000)  && 500 KB
-* WriteToLog("Користувач увійшов у систему", "application_log.txt")
-* WriteToLog("Тест")
+* Logging to a text file
+* Example
+* WriteToLog("Program started", "application_log.txt", 500000)  && 500 KB
+* WriteToLog("User logged in", "application_log.txt")
+* WriteToLog("Test")
 
 PROCEDURE WriteToLog
     LPARAMETERS cLogMessage, cLogFile, nMaxSize
-    * Параметри:
-    * cLogMessage - текст повідомлення, яке потрібно додати до логу.
-    * cLogFile - шлях до файлу логу (наприклад, "log.txt").
-    * nMaxSize - максимальний розмір файлу логу в байтах (за замовчуванням 1 MB).
+    * Parameters:
+    * cLogMessage - the text message to be added to the log.
+    * cLogFile - the path to the log file (e.g., "log.txt").
+    * nMaxSize - the maximum size of the log file in bytes (default is 1 MB).
 
-    * Значення за замовчуванням
+    * Default values
     IF EMPTY(cLogFile)
-        cLogFile = "log.txt" && Файл логу за замовчуванням
+        cLogFile = "log.txt" && Default log file
     ENDIF
 
     IF EMPTY(nMaxSize)
         nMaxSize = 1048576 && 1 MB
     ENDIF
 
-    * Формуємо рядок для запису з позначкою часу
+    * Create an entry with a timestamp for the log
     cLogEntry = TTOC(DATETIME()) + " - " + cLogMessage + CHR(13) + CHR(10)
 
-    * Перевіряємо розмір файлу за допомогою ADIR()
+    * Check the file size using ADIR()
     LOCAL aFileInfo[1]
     LOCAL nFileSize
     nFileSize = 0
 
     IF FILE(cLogFile)
         =ADIR(aFileInfo, cLogFile)
-        nFileSize = aFileInfo[1, 2]  && Розмір файлу у байтах
+        nFileSize = aFileInfo[1, 2]  && File size in bytes
     ENDIF
 
-    * Виконуємо ротацію, якщо розмір файлу перевищує заданий ліміт
+    * Perform rotation if the file size exceeds the specified limit
     IF nFileSize > nMaxSize
-        * Видаляємо попередній резервний файл, якщо існує
+        * Delete the previous backup file if it exists
         IF FILE("log_backup.txt")
             ERASE "log_backup.txt"
         ENDIF
 
-        * Перейменовуємо поточний файл логу на резервний
+        * Rename the current log file to a backup
         RENAME (cLogFile) TO "log_backup.txt"
     ENDIF
 
-    * Додаємо новий запис до файлу логу
+    * Add a new entry to the log file
     STRTOFILE(cLogEntry, cLogFile, .T.)
 ENDPROC
