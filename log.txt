@@ -1,147 +1,35 @@
-01/15/25 11:33:40 - Found devices: 2
-01/15/25 11:33:40 - Getting number of relays on the device
-01/15/25 11:33:40 - Number of relays on the device: 2
-01/15/25 11:33:41 - Opening BITFT
-01/15/25 11:33:41 - Number of relays on device with ID=BITFT: 2
-01/15/25 11:33:41 - Opening relay channel 1 on device
-01/15/25 11:33:41 - Relay channel 1 opened successfully
-01/15/25 11:33:42 - Opening BITFT
-01/15/25 11:33:42 - Number of relays on device with ID=BITFT: 2
-01/15/25 11:33:42 - Opening relay channel 2 on device
-01/15/25 11:33:42 - Relay channel 2 opened successfully
-01/15/25 11:33:43 - Getting number of relays on the device
-01/15/25 11:33:43 - Number of relays on the device: 2
-01/15/25 11:33:44 - Opening HURTM
-01/15/25 11:33:44 - Number of relays on device with ID=HURTM: 2
-01/15/25 11:33:44 - Closing relay channel 1 on device
-01/15/25 11:33:44 - Relay channel 1 closed successfully
-01/15/25 11:33:44 - Opening HURTM
-01/15/25 11:33:44 - Number of relays on device with ID=HURTM: 2
-01/15/25 11:33:44 - Opening relay channel 1 on device
-01/15/25 11:33:44 - Relay channel 1 opened successfully
-01/15/25 11:33:44 - Opening HURTM
-01/15/25 11:33:44 - Number of relays on device with ID=HURTM: 2
-01/15/25 11:33:44 - Closing relay channel 1 on device
-01/15/25 11:33:44 - Relay channel 1 closed successfully
-01/15/25 11:33:45 - Opening HURTM
-01/15/25 11:33:45 - Number of relays on device with ID=HURTM: 2
-01/15/25 11:33:45 - Opening relay channel 1 on device
-01/15/25 11:33:45 - Relay channel 1 opened successfully
-01/15/25 11:33:45 - Opening HURTM
-01/15/25 11:33:45 - Number of relays on device with ID=HURTM: 2
-01/15/25 11:33:45 - Closing relay channel 2 on device
-01/15/25 11:33:45 - Relay channel 2 closed successfully
-01/15/25 11:33:46 - Opening BITFT
-01/15/25 11:33:46 - Number of relays on device with ID=BITFT: 2
-01/15/25 11:33:46 - Closing all relay channels on device
-01/15/25 11:33:46 - All relay channels closed successfully on device
-01/15/25 11:33:46 - Opening HURTM
-01/15/25 11:33:46 - Number of relays on device with ID=HURTM: 2
-01/15/25 11:33:46 - Closing all relay channels on device
-01/15/25 11:33:46 - All relay channels closed successfully on device
-01/15/25 11:33:46 - Found devices: 2
-01/15/25 11:33:46 - Getting number of relays on the device
-01/15/25 11:33:46 - Number of relays on the device: 2
-01/15/25 11:33:47 - Opening HURTM
-01/15/25 11:33:47 - Number of relays on device with ID=HURTM: 2
-01/15/25 11:33:47 - Opening relay channel 1 on device
-01/15/25 11:33:47 - Relay channel 1 opened successfully
-01/15/25 11:33:47 - Opening HURTM
-01/15/25 11:33:47 - Number of relays on device with ID=HURTM: 2
-01/15/25 11:33:47 - Opening relay channel 2 on device
-01/15/25 11:33:47 - Relay channel 2 opened successfully
-01/15/25 11:33:47 - Pause for 2 seconds...
-01/15/25 11:33:49 - Opening HURTM
-01/15/25 11:33:49 - Number of relays on device with ID=HURTM: 2
-01/15/25 11:33:49 - Closing relay channel 1 on device
-01/15/25 11:33:49 - Relay channel 1 closed successfully
-01/15/25 11:33:49 - Opening HURTM
-01/15/25 11:33:49 - Number of relays on device with ID=HURTM: 2
-01/15/25 11:33:49 - Closing relay channel 2 on device
-01/15/25 11:33:49 - Relay channel 2 closed successfully
-01/15/25 11:33:51 - Opening HURTM
-01/15/25 11:33:51 - Number of relays on device with ID=HURTM: 2
-01/15/25 11:33:51 - Opening relay channel 1 on device
-01/15/25 11:33:51 - Relay channel 1 opened successfully
-01/15/25 11:33:51 - Opening HURTM
-01/15/25 11:33:51 - Number of relays on device with ID=HURTM: 2
-01/15/25 11:33:51 - Opening relay channel 2 on device
-01/15/25 11:33:51 - Relay channel 2 opened successfully
-01/15/25 11:33:51 - Pause for 2 seconds...
-01/15/25 11:33:51 - Opening HURTM
-01/15/25 11:33:51 - Number of relays on device with ID=HURTM: 2
-01/15/25 11:33:51 - Closing relay channel 1 on device
-01/15/25 11:33:51 - Relay channel 1 closed successfully
-01/15/25 11:33:51 - Opening HURTM
-01/15/25 11:33:51 - Number of relays on device with ID=HURTM: 2
-01/15/25 11:33:51 - Closing relay channel 2 on device
-01/15/25 11:33:51 - Relay channel 2 closed successfully
-01/15/25 11:33:52 - Opening HURTM
-01/15/25 11:33:52 - Number of relays on device with ID=HURTM: 2
-01/15/25 11:33:52 - Opening relay channel 1 on device
-01/15/25 11:33:52 - Relay channel 1 opened successfully
-01/15/25 11:33:52 - Opening HURTM
-01/15/25 11:33:52 - Number of relays on device with ID=HURTM: 2
-01/15/25 11:33:52 - Opening relay channel 2 on device
-01/15/25 11:33:52 - Relay channel 2 opened successfully
-01/15/25 11:33:52 - Pause for 2 seconds...
-01/15/25 11:33:52 - Opening HURTM
-01/15/25 11:33:52 - Number of relays on device with ID=HURTM: 2
-01/15/25 11:33:52 - Closing relay channel 1 on device
-01/15/25 11:33:52 - Relay channel 1 closed successfully
-01/15/25 11:33:52 - Opening HURTM
-01/15/25 11:33:52 - Number of relays on device with ID=HURTM: 2
-01/15/25 11:33:52 - Closing relay channel 2 on device
-01/15/25 11:33:52 - Relay channel 2 closed successfully
-01/15/25 11:33:53 - Opening HURTM
-01/15/25 11:33:53 - Number of relays on device with ID=HURTM: 2
-01/15/25 11:33:53 - Opening relay channel 1 on device
-01/15/25 11:33:53 - Relay channel 1 opened successfully
-01/15/25 11:33:53 - Opening HURTM
-01/15/25 11:33:53 - Number of relays on device with ID=HURTM: 2
-01/15/25 11:33:53 - Opening relay channel 2 on device
-01/15/25 11:33:53 - Relay channel 2 opened successfully
-01/15/25 11:33:53 - Pause for 2 seconds...
-01/15/25 11:33:53 - Opening HURTM
-01/15/25 11:33:53 - Number of relays on device with ID=HURTM: 2
-01/15/25 11:33:53 - Closing relay channel 1 on device
-01/15/25 11:33:53 - Relay channel 1 closed successfully
-01/15/25 11:33:53 - Opening HURTM
-01/15/25 11:33:53 - Number of relays on device with ID=HURTM: 2
-01/15/25 11:33:53 - Closing relay channel 2 on device
-01/15/25 11:33:53 - Relay channel 2 closed successfully
-01/15/25 11:33:53 - Opening HURTM
-01/15/25 11:33:53 - Number of relays on device with ID=HURTM: 2
-01/15/25 11:33:53 - Opening relay channel 1 on device
-01/15/25 11:33:53 - Relay channel 1 opened successfully
-01/15/25 11:33:53 - Opening HURTM
-01/15/25 11:33:53 - Number of relays on device with ID=HURTM: 2
-01/15/25 11:33:53 - Opening relay channel 2 on device
-01/15/25 11:33:53 - Relay channel 2 opened successfully
-01/15/25 11:33:53 - Pause for 2 seconds...
-01/15/25 11:33:54 - Opening HURTM
-01/15/25 11:33:54 - Number of relays on device with ID=HURTM: 2
-01/15/25 11:33:54 - Closing relay channel 1 on device
-01/15/25 11:33:54 - Relay channel 1 closed successfully
-01/15/25 11:33:54 - Opening HURTM
-01/15/25 11:33:54 - Number of relays on device with ID=HURTM: 2
-01/15/25 11:33:54 - Closing relay channel 2 on device
-01/15/25 11:33:54 - Relay channel 2 closed successfully
-01/15/25 11:33:55 - Getting number of relays on the device
-01/15/25 11:33:55 - Number of relays on the device: 2
-01/15/25 11:33:55 - Found devices: 2
-01/15/25 11:33:55 - Getting number of relays on the device
-01/15/25 11:33:55 - Number of relays on the device: 2
-01/15/25 11:33:57 - Opening BITFT
-01/15/25 11:33:57 - Number of relays on device with ID=BITFT: 2
-01/15/25 11:33:57 - Closing all relay channels on device
-01/15/25 11:33:57 - All relay channels closed successfully on device
-01/15/25 11:33:57 - Opening HURTM
-01/15/25 11:33:57 - Number of relays on device with ID=HURTM: 2
-01/15/25 11:33:57 - Closing all relay channels on device
-01/15/25 11:33:57 - All relay channels closed successfully on device
-01/15/25 11:33:57 - Found devices: 2
-01/15/25 11:33:57 - Getting number of relays on the device
-01/15/25 11:33:57 - Number of relays on the device: 2
-01/15/25 11:34:15 - Closing all relay channels on device
-01/15/25 11:34:15 - All relay channels closed successfully on device
+01/15/25 11:35:13 - Found devices: 2
+01/15/25 11:35:13 - Getting number of relays on the device
+01/15/25 11:35:13 - Failed to get the number of relays or no relays found on device
+01/15/25 11:35:21 - Opening BITFT
+01/15/25 11:35:21 - Number of relays on device with ID=BITFT: 2
+01/15/25 11:35:21 - Opening relay channel 1 on device
+01/15/25 11:35:21 - Relay channel 1 opened successfully
+01/15/25 11:35:22 - Getting number of relays on the device
+01/15/25 11:35:22 - Number of relays on the device: 2
+01/15/25 11:35:23 - Opening HURTM
+01/15/25 11:35:23 - Number of relays on device with ID=HURTM: 2
+01/15/25 11:35:23 - Closing relay channel 1 on device
+01/15/25 11:35:23 - Relay channel 1 closed successfully
+01/15/25 11:35:24 - Opening HURTM
+01/15/25 11:35:24 - Number of relays on device with ID=HURTM: 2
+01/15/25 11:35:24 - Opening relay channel 1 on device
+01/15/25 11:35:24 - Relay channel 1 opened successfully
+01/15/25 11:35:25 - Opening HURTM
+01/15/25 11:35:25 - Number of relays on device with ID=HURTM: 2
+01/15/25 11:35:25 - Opening relay channel 2 on device
+01/15/25 11:35:25 - Relay channel 2 opened successfully
+01/15/25 11:35:25 - Opening HURTM
+01/15/25 11:35:25 - Number of relays on device with ID=HURTM: 2
+01/15/25 11:35:25 - Closing relay channel 1 on device
+01/15/25 11:35:25 - Relay channel 1 closed successfully
+01/15/25 11:35:26 - Opening HURTM
+01/15/25 11:35:26 - Number of relays on device with ID=HURTM: 2
+01/15/25 11:35:26 - Closing relay channel 2 on device
+01/15/25 11:35:26 - Relay channel 2 closed successfully
+01/15/25 11:35:27 - Opening HURTM
+01/15/25 11:35:27 - Number of relays on device with ID=HURTM: 2
+01/15/25 11:35:27 - Opening relay channel 1 on device
+01/15/25 11:35:27 - Relay channel 1 opened successfully
+01/15/25 11:40:53 - Closing all relay channels on device
+01/15/25 11:40:54 - All relay channels closed successfully on device
